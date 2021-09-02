@@ -8,10 +8,10 @@ const config = {
       pages: 'build',
       assets: 'build',
       fallback: null
-    })
-  },
-  paths: {
-    base: 'mysfits-modules3-final/'
+    }),
+    paths: {
+      base: '/mysfits-module3-final'
+    }
   }
 };
 
