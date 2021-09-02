@@ -9,6 +9,9 @@ const config = {
       assets: 'build',
       fallback: null
     })
+  },
+  paths: {
+    base: 'mysfits-modules3-final/'
   }
 };
 
