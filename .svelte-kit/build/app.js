@@ -46,7 +46,7 @@ export function init(settings = default_settings) {
 		service_worker: null,
 		router: true,
 		ssr: true,
-		target: "#svelte",
+		target: null,
 		template,
 		trailing_slash: "never"
 	};
