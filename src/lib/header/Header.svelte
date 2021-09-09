@@ -1,9 +1,11 @@
 <script>
   import { page } from '$app/stores';
   import logo from '/static/logo.svg';
+
+  let header = $page.path === '/' ? 'img/hero.jpg' : `img/${$page.path}.jpg`;
 </script>
 
-<header>
+<header data-header={header} style="--header-img: url({header});">
   <div class="corner">
     <a href="https://kit.svelte.dev">
       <img src={logo} alt="SvelteKit" />
@@ -27,8 +29,25 @@
   @use '../scss/vars' as *;
 
   header {
+    max-width: 1200px;
+    min-height: 400px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    background: var(--header-img, url('img/hero.jpg')) no-repeat center;
+    background-size: cover;
+    border-radius: 2rem;
+  }
+
+  [data-header='/'] {
+    background: url('img/hero.jpg') no-repeat center;
+    background-size: cover;
+  }
+
+  [data-header='blog'] {
+    background: url('img/blog.jpg') no-repeat center;
+    background-size: cover;
   }
 
   .corner {
