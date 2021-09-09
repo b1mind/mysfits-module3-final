@@ -1,7 +1,8 @@
 Todo:
   ☐ scss and postcss plugins
-  ☐ global.scss and _var.scss
-  ☐ github pages deploy script
+  ✔ global.scss and _var.scss @done(21-09-08 22:47)
+  ✘ github pages deploy script @cancelled(21-09-03 18:33)
+  ✔ vercel deploy @done(21-09-08 21:43)
   ☐ update package.json
   ☐ update readme.md
   ☐ update gitignore

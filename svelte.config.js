@@ -6,5 +6,5 @@ export default {
   kit: {
     adapter: vercel()
   },
-  preprocess: preprocess
+  preprocess: preprocess({})
 };
