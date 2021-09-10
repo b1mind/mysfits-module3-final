@@ -1,6 +1,5 @@
 <script>
   import { page } from '$app/stores';
-  import logo from '/logo.svg';
 
   $: header = $page.path === '/' ? 'img/hero.jpg' : `img/${$page.path}.jpg`;
 </script>
@@ -8,7 +7,7 @@
 <header style="--header-img: url({header});">
   <div class="corner">
     <a href="#void">
-      <img src={logo} alt="SvelteKit" />
+      <img src="/logo.svg" alt="SvelteKit" />
     </a>
   </div>
 
