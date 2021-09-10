@@ -1,7 +1,7 @@
 <script>
   import { page } from '$app/stores';
 
-  $: header = $page.path === '/' ? 'img/hero.jpg' : `img/${$page.path}.jpg`;
+  $: header = $page.path === '/' ? '/img/hero.jpg' : `/img/${$page.path}.jpg`;
 </script>
 
 <header style="--header-img: url({header});">
@@ -31,7 +31,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background: var(--header-img, url('img/hero.jpg')) no-repeat center;
+    background: var(--header-img, url('/img/hero.jpg')) no-repeat center;
     background-size: cover;
     border-radius: 2rem;
   }
