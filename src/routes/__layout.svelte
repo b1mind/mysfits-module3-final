@@ -11,19 +11,21 @@
 </main>
 
 <footer>
-  <p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+  <ul>
+    <li>link</li>
+    <li>link</li>
+    <li>link</li>
+    <li>link</li>
+  </ul>
 </footer>
 
-<style>
+<style lang="scss">
+  @use '../lib/scss/vars' as *;
+
   main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
     width: 100%;
-    max-width: 1024px;
+    max-width: $mediaLg;
     margin: 0 auto;
-    box-sizing: border-box;
   }
 
   footer {
@@ -32,15 +34,5 @@
     justify-content: center;
     align-items: center;
     padding: 40px;
-  }
-
-  footer a {
-    font-weight: bold;
-  }
-
-  @media (min-width: 480px) {
-    footer {
-      padding: 40px 0;
-    }
   }
 </style>

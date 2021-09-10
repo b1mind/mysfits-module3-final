@@ -2,58 +2,61 @@
   export const prerender = true;
 </script>
 
-<script>
-  import Counter from '$lib/Counter.svelte';
-</script>
-
 <svelte:head>
   <title>Home</title>
 </svelte:head>
 
-<section>
-  <h1>
-    <div class="welcome">
-      <picture>
-        <source srcset="svelte-welcome.webp" type="image/webp" />
-        <img src="svelte-welcome.png" alt="Welcome" />
-      </picture>
-    </div>
-
-    to your new<br />SvelteKit app
-  </h1>
-
-  <h2>
-    try editing <strong>src/routes/index.svelte</strong>
-  </h2>
-
-  <Counter />
+<section class="light">
+  <div class="wrap">
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing</h1>
+    <p class="title-med">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, dicta nostrum! Dicta beatae quo
+      consequuntur inventore provident magni.
+    </p>
+    <button>connect ></button>
+  </div>
 </section>
 
-<style>
+<section class="light">
+  <div class="wrap">
+    <div class="title">About</div>
+    <p class="title-med">
+      Tenetur eos! Expedita, quasi. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    </p>
+
+    <p class="title-med">
+      Officiis tenetur voluptate odit sequi eum ex? Lorem ipsum dolor sit amet consectetur,
+      adipisicing elit. Distinctio, adipisci.
+    </p>
+  </div>
+</section>
+
+<section class="accent">
+  <div class="wrap">
+    <div class="title">Blog</div>
+    <h2>Latest news, and opinions</h2>
+  </div>
+</section>
+
+<style lang="scss">
+  @use '../lib/scss/vars' as *;
+
   section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
+    padding: 4rem 0;
+    background-color: var(--clr-bg, var(--clr-neutral-200));
+    border-radius: 2rem;
+
+    &.light {
+      --clr-bg: var(--clr-neutral-100);
+    }
+
+    &.accent {
+      --clr-bg: var(--clr-primary-300);
+    }
   }
 
-  h1 {
-    width: 100%;
-  }
-
-  .welcome {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding: 0 0 calc(100% * 495 / 2048) 0;
-  }
-
-  .welcome img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    display: block;
+  .wrap {
+    max-width: 77ch;
+    margin: 0 auto;
   }
 </style>

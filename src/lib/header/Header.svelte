@@ -1,13 +1,13 @@
 <script>
   import { page } from '$app/stores';
-  import logo from '/static/logo.svg';
+  import logo from '/logo.svg';
 
-  let header = $page.path === '/' ? 'img/hero.jpg' : `img/${$page.path}.jpg`;
+  $: header = $page.path === '/' ? 'img/hero.jpg' : `img/${$page.path}.jpg`;
 </script>
 
-<header data-header={header} style="--header-img: url({header});">
+<header style="--header-img: url({header});">
   <div class="corner">
-    <a href="https://kit.svelte.dev">
+    <a href="#void">
       <img src={logo} alt="SvelteKit" />
     </a>
   </div>
@@ -15,39 +15,26 @@
   <nav>
     <ul>
       <li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-      <li class:active={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
+      <li class:active={$page.path === '/blog'}><a sveltekit:prefetch href="/blog">Blog</a></li>
     </ul>
   </nav>
-
-  <div class="corner">
-    GitHub
-    <!-- TODO put something else here? github link? -->
-  </div>
 </header>
 
 <style lang="scss">
   @use '../scss/vars' as *;
 
   header {
-    max-width: 1200px;
-    min-height: 400px;
+    width: 100%;
+    max-width: $mediaLg;
+    min-height: 500px;
     margin: 0 auto;
+    padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     background: var(--header-img, url('img/hero.jpg')) no-repeat center;
     background-size: cover;
     border-radius: 2rem;
-  }
-
-  [data-header='/'] {
-    background: url('img/hero.jpg') no-repeat center;
-    background-size: cover;
-  }
-
-  [data-header='blog'] {
-    background: url('img/blog.jpg') no-repeat center;
-    background-size: cover;
   }
 
   .corner {
@@ -64,15 +51,14 @@
   }
 
   .corner img {
-    width: 2em;
-    height: 2em;
+    width: 3rem;
+    height: 2rem;
     object-fit: contain;
   }
 
   nav {
     display: flex;
     justify-content: center;
-    --background: rgba(255, 255, 255, 0.7);
   }
 
   ul {
