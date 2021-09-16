@@ -7,7 +7,7 @@
 <header style="--header-img: url({header});">
   <div class="corner">
     <a href="#void">
-      <img src="/logo.svg" alt="SvelteKit" />
+      <img src="/logo.svg" alt="Acme" />
     </a>
   </div>
 
@@ -20,7 +20,7 @@
 </header>
 
 <style lang="scss">
-  @use '../scss/vars' as *;
+  @use './scss/vars' as *;
 
   header {
     width: 100%;
@@ -87,7 +87,7 @@
     top: 0;
     left: calc(50% - var(--size));
     border: var(--size) solid transparent;
-    border-top: var(--size) solid var(--accent-color);
+    border-top: var(--size) solid var(--clr-neutral-100);
   }
 
   nav a {

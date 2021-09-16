@@ -1,7 +1,5 @@
 <script>
-  import '../app.scss';
-
-  import Header from '$lib/header/Header.svelte';
+  import Header from '$lib/Header.svelte';
 </script>
 
 <Header />
@@ -11,12 +9,26 @@
 </main>
 
 <footer>
-  <ul>
-    <li>link</li>
-    <li>link</li>
-    <li>link</li>
-    <li>link</li>
-  </ul>
+  <img src="/logo.svg" alt="Acme" />
+  <nav>
+    <h2 class="title">Map</h2>
+    <ul>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+    </ul>
+  </nav>
+
+  <nav>
+    <h2 class="title">Recent</h2>
+    <ul>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+    </ul>
+  </nav>
 </footer>
 
 <style lang="scss">
@@ -30,8 +42,7 @@
 
   footer {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 40px;
   }

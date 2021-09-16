@@ -40,10 +40,21 @@ html {
   height: 100%;
 }
 
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 body {
   min-height: 100%;
   margin: 0;
   font-family: var(--ff-sans);
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
 }
 
 h1,
@@ -81,4 +92,14 @@ h3,
 
 .flex {
   display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 77ch;
+  margin: 0 auto;
+}
+
+.wrap {
+  flex-wrap: wrap;
 }

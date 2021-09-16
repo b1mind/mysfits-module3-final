@@ -1,4 +1,6 @@
 <script context="module">
+  import Card from '$lib/Card.svelte';
+
   export const prerender = true;
 </script>
 
@@ -7,7 +9,7 @@
 </svelte:head>
 
 <section class="light">
-  <div class="wrap">
+  <div class="container">
     <h1>Lorem ipsum dolor sit amet, consectetur adipisicing</h1>
     <p class="title-med">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, dicta nostrum! Dicta beatae quo
@@ -18,7 +20,7 @@
 </section>
 
 <section class="light">
-  <div class="wrap">
+  <div class="container">
     <div class="title">About</div>
     <p class="title-med">
       Tenetur eos! Expedita, quasi. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -32,9 +34,14 @@
 </section>
 
 <section class="accent">
-  <div class="wrap">
+  <div class="container">
     <div class="title">Blog</div>
     <h2>Latest news, and opinions</h2>
+    <div class="flex wrap">
+      <Card />
+      <Card />
+      <Card />
+    </div>
   </div>
 </section>
 
@@ -53,10 +60,5 @@
     &.accent {
       --clr-bg: var(--clr-primary-300);
     }
-  }
-
-  .wrap {
-    max-width: 77ch;
-    margin: 0 auto;
   }
 </style>
