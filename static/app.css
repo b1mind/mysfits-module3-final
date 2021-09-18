@@ -4,7 +4,6 @@
   --ff-sans: 'IBM Plex Sans', sans-serif;
   --ff-serif: 'IBM Plex Serif', serif;
 
-  /* small screen font-sizes */
   --fs-200: 0.75rem;
   --fs-300: 1rem;
   --fs-400: 1.25rem;
@@ -50,6 +49,12 @@ body {
   min-height: 100%;
   margin: 0;
   font-family: var(--ff-sans);
+}
+
+a,
+button {
+  display: inline-block;
+  cursor: pointer;
 }
 
 img {
@@ -134,7 +139,6 @@ section {
 }
 
 .btn {
-  display: inline-block;
   font-weight: var(--fw-700);
   background-color: var(--clr-bg, var(--clr-neutral-100));
   border: none;

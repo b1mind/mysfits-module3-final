@@ -2,6 +2,7 @@
   <div class="container">
     <h2>Inbox</h2>
     <div class="title">Knowledge letters</div>
+
     <div class="img">
       <img src="/img/newsletter.jpg" alt="Subscribe for newsletter" />
     </div>

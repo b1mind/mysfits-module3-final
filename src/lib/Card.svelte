@@ -1,20 +1,22 @@
 <script>
-  export let shape = {
-    title: 'Some title goes here',
-    summary: 'Short summary needs to go here',
-    content:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ab enim consectetur dolor tempora dicta, quibusdam obcaecati distinctio non sapiente ad, voluptas architecto! Temporibus tempora ratione beatae alias aliquam illum!',
-    img: 'blog-1.jpg'
-  };
+  export let title = 'this is a filler title'
+  export let body =
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur voluptatum quasi praesentium magni ullam amet ut officia laudantium! Enim voluptatum recusandae dolor ea aut modi possimus. Iste praesentium necessitatibus odio'
+  export let id = 1
+  export let img = `blog-${id}.jpg`
+
+  function getSlug(title) {
+    return title.split(' ').join('-')
+  }
 </script>
 
 <article class="space">
   <!-- //todo find out which way you want to do post images... -->
-  <div class="img" style="--post-img: url('/img/{shape.img}');">
-    <img src="/img/{shape.img}" alt={shape.title} />
+  <div class="img">
+    <img src="/img/{img}" alt={title} />
   </div>
-  <h3>{shape.title}</h3>
-  <p>{shape.summary}</p>
+  <h3><a href="/blog/{getSlug(title)}?id={id}">{title.substring(0, 40)}</a></h3>
+  <p>{body.substring(0, 80)}...</p>
 
   <footer class="flex">
     <time class="title-sml" datetime="2021-10-08">Oct 8</time>
@@ -28,9 +30,6 @@
   }
 
   .img {
-    // height: 175px;
-    // background: var(--post-img, url('/img/blog-1.jpg')) no-repeat center;
-    // background-size: cover;
     border-radius: 1rem;
     overflow: hidden;
   }
