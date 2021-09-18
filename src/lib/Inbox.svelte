@@ -5,15 +5,16 @@
     <div class="img">
       <img src="/img/newsletter.jpg" alt="Subscribe for newsletter" />
     </div>
-    <form action="">
-      <label for="">Name<input type="text" /></label>
+
+    <form class="flex" on:submit|preventDefault>
+      <label for="name">Name<input type="text" /></label>
       <label>Email<input type="text" /></label>
-      <button>Subscribe > </button>
+      <button class="btn">Subscribe</button>
     </form>
   </div>
 </section>
 
-<style>
+<style lang="scss">
   .light {
     --clr-bg: var(--clr-neutral-100);
   }
@@ -23,7 +24,24 @@
     overflow: hidden;
   }
 
+  .flex {
+    align-items: flex-end;
+  }
+
   img {
     object-fit: cover;
+  }
+
+  form {
+    padding: 1em;
+  }
+
+  label,
+  input {
+    width: 90%;
+  }
+
+  input {
+    display: block;
   }
 </style>

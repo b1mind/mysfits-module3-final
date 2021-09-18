@@ -1,8 +1,8 @@
 <script context="module">
-  import Card from '$lib/Card.svelte';
-  import Inbox from '$lib/Inbox.svelte';
+  import Card from '$lib/Card.svelte'
+  import Inbox from '$lib/Inbox.svelte'
 
-  export const prerender = true;
+  export const prerender = true
 </script>
 
 <svelte:head>
@@ -13,24 +13,27 @@
   <div class="container space">
     <h1>Lorem ipsum dolor sit amet, consectetur adipisicing</h1>
     <p class="title-med">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, dicta nostrum! Dicta beatae quo
-      consequuntur inventore provident magni.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, dicta
+      nostrum! Dicta beatae quo consequuntur inventore provident magni.
     </p>
-    <button>connect ></button>
+    <button class="btn">connect ></button>
   </div>
 </section>
 
 <section class="light">
   <div class="container">
     <h2>About</h2>
-    <p class="title-med">
-      Tenetur eos! Expedita, quasi. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-    </p>
+    <div class="space">
+      <p class="title-med">
+        Tenetur eos! Expedita, quasi. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit.
+      </p>
 
-    <p class="title-med">
-      Officiis tenetur voluptate odit sequi eum ex? Lorem ipsum dolor sit amet consectetur,
-      adipisicing elit. Distinctio, adipisci.
-    </p>
+      <p class="title-med">
+        Officiis tenetur voluptate odit sequi eum ex? Lorem ipsum dolor sit amet
+        consectetur, adipisicing elit. Distinctio, adipisci.
+      </p>
+    </div>
   </div>
 </section>
 

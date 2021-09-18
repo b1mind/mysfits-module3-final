@@ -1,4 +1,23 @@
 <script>
+  import SocialIcons from './SocialIcons.svelte'
+  const icons = [
+    {
+      name: 'twitter',
+      url: 'twitter.com/b1mind/'
+    },
+    {
+      name: 'twitch',
+      url: 'twitch.tv/b1mind/'
+    },
+    {
+      name: 'github',
+      url: 'github.com/b1mind/'
+    },
+    {
+      name: 'codepen',
+      url: 'codepen.io/b1mind/'
+    }
+  ]
 </script>
 
 <footer>
@@ -22,9 +41,18 @@
         </ul>
       </nav>
     </section>
+
     <section class="footer-text flex">
       <p>Copyright stuffs 2021</p>
-      <nav class="social">gh ig cp tw</nav>
+      <nav class="social">
+        <ul class="flex">
+          {#each icons as icon}
+            <li>
+              <SocialIcons name={icon.name} url={icon.url} />
+            </li>
+          {/each}
+        </ul>
+      </nav>
     </section>
   </div>
 </footer>
@@ -41,6 +69,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    font-weight: var(--fw-700);
     border-top: 1px solid var(--clr-neutral-200);
     border-bottom: 1px solid var(--clr-neutral-200);
     border-radius: 0;
@@ -53,5 +82,11 @@
 
   .footer-text {
     padding: 2.5rem 0;
+  }
+
+  .social {
+    ul > * + * {
+      margin-left: 0.75em;
+    }
   }
 </style>
