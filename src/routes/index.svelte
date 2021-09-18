@@ -1,5 +1,6 @@
 <script context="module">
   import Card from '$lib/Card.svelte';
+  import Inbox from '$lib/Inbox.svelte';
 
   export const prerender = true;
 </script>
@@ -9,7 +10,7 @@
 </svelte:head>
 
 <section class="light">
-  <div class="container">
+  <div class="container space">
     <h1>Lorem ipsum dolor sit amet, consectetur adipisicing</h1>
     <p class="title-med">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, dicta nostrum! Dicta beatae quo
@@ -21,7 +22,7 @@
 
 <section class="light">
   <div class="container">
-    <div class="title">About</div>
+    <h2>About</h2>
     <p class="title-med">
       Tenetur eos! Expedita, quasi. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
     </p>
@@ -35,8 +36,8 @@
 
 <section class="accent">
   <div class="container">
-    <div class="title">Blog</div>
-    <h2>Latest news, and opinions</h2>
+    <h2>Blog</h2>
+    <div class="title">Latest news, and opinions</div>
     <div class="flex wrap">
       <Card />
       <Card />
@@ -45,20 +46,20 @@
   </div>
 </section>
 
+<Inbox />
+
 <style lang="scss">
   @use '../lib/scss/vars' as *;
 
-  section {
-    padding: 4rem 0;
-    background-color: var(--clr-bg, var(--clr-neutral-200));
-    border-radius: 2rem;
+  .light {
+    --clr-bg: var(--clr-neutral-100);
+  }
 
-    &.light {
-      --clr-bg: var(--clr-neutral-100);
-    }
+  .accent {
+    --clr-bg: var(--clr-primary-300);
+  }
 
-    &.accent {
-      --clr-bg: var(--clr-primary-300);
-    }
+  .space {
+    --spacer: 2rem;
   }
 </style>
