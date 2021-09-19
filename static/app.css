@@ -139,7 +139,14 @@ section {
 }
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--fs-300);
   font-weight: var(--fw-700);
   background-color: var(--clr-bg, var(--clr-neutral-100));
   border: none;
+}
+
+.btn-icon {
+  margin-left: 0.5em;
 }
