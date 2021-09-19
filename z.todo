@@ -1,9 +1,17 @@
 Todo:
-  ☐ scss and postcss plugins
-  ✔ global.scss and _var.scss @done(21-09-08 22:47)
   ✘ github pages deploy script @cancelled(21-09-03 18:33)
   ✔ vercel deploy @done(21-09-08 21:43)
+  ✔ update gitignore @done(21-09-18 22:03)
+  ✔ favicon and logo @done(21-09-18 22:03)
+  ✔ global.scss and _var.scss @done(21-09-08 22:47)
   ☐ update package.json
+  ☐ scss and postcss plugins
   ☐ update readme.md
-  ☐ update gitignore
-  ☐ favicon and logo
+  ☐ separate hero from header with new slot component
+  ☐ make json logic a store if it can serve one request
+
+Style:
+  ☐ form inputs/labels
+  ☐ change card containers to grid
+  ☐ hover for cards
+  ☐ links for cards and defaults
