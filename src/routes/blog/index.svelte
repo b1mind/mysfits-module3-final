@@ -14,8 +14,8 @@
 </script>
 
 <script>
-  import Card from '../../lib/Card.svelte'
-  import Inbox from '../../lib/Inbox.svelte'
+  import Card from '$lib/Card.svelte'
+  import Inbox from '$lib/Inbox.svelte'
 
   export let posts
 </script>
@@ -24,9 +24,12 @@
   <title>Blog - acme</title>
 </svelte:head>
 
-<div class="flex wrap">
-  {#each posts as { id, title, body }}
-    <Card {id} {title} img={`blog-${id}.jpg`} {body} />
-  {/each}
+<div class="container">
+  <div class="flex wrap">
+    {#each posts as { id, title, body }}
+      <Card {id} {title} img={`blog-${id}.jpg`} {body} />
+    {/each}
+  </div>
 </div>
+
 <Inbox />
