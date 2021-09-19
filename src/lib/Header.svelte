@@ -1,7 +1,11 @@
 <script>
-  import { page } from '$app/stores';
+  import { page } from '$app/stores'
 
-  $: header = $page.path === '/' ? '/img/hero.jpg' : `/img/${$page.path}.jpg`;
+  $: header = $page.query.has('id')
+    ? `/img/blog-${$page.query.get('id')}.jpg`
+    : $page.path === '/'
+    ? '/img/hero.jpg'
+    : `/img/${$page.path}.jpg`
 </script>
 
 <header style="--header-img: url({header});">
@@ -13,8 +17,12 @@
 
   <nav>
     <ul>
-      <li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-      <li class:active={$page.path === '/blog'}><a sveltekit:prefetch href="/blog">Blog</a></li>
+      <li class:active={$page.path === '/'}>
+        <a sveltekit:prefetch href="/">Home</a>
+      </li>
+      <li class:active={$page.path === '/blog'}>
+        <a sveltekit:prefetch href="/blog">Blog</a>
+      </li>
     </ul>
   </nav>
 </header>
