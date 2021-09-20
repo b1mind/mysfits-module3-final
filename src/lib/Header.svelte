@@ -1,18 +1,39 @@
 <script>
   import { page } from '$app/stores'
 
-  $: header = $page.query.has('id')
+  $: isPost = $page.query.has('id')
+
+  $: header = isPost
     ? `/img/blog-${$page.query.get('id')}.jpg`
     : $page.path === '/'
     ? '/img/hero.jpg'
     : `/img/${$page.path}.jpg`
+  console.dir($page)
 </script>
 
 <header style="--header-img: url({header});">
-  <div class="corner">
-    <a href="#void">
-      <img src="/logo.svg" alt="Acme" />
-    </a>
+  <div class="flex logo">
+    <div class="corner">
+      <a href="#void">
+        <img src="/logo.svg" alt="Acme" />
+      </a>
+    </div>
+    {#if isPost}
+      <nav>
+        <ul>
+          <li>
+            <button on:click={() => window.history.back()}>
+              <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24">
+                <path
+                  d="M15.422 7.406l-4.594 4.594 4.594 4.594-1.406 1.406-6-6 6-6z"
+                />
+              </svg>
+              Back
+            </button>
+          </li>
+        </ul>
+      </nav>
+    {/if}
   </div>
 
   <nav>
@@ -31,6 +52,7 @@
   @use './scss/vars' as *;
 
   header {
+    position: relative;
     width: 100%;
     max-width: $mediaLg;
     min-height: 500px;
@@ -42,6 +64,11 @@
     background: var(--header-img, url('/img/hero.jpg')) no-repeat center;
     background-size: cover;
     border-radius: 2rem;
+  }
+
+  .logo {
+    flex-basis: 23%;
+    justify-content: space-between;
   }
 
   .corner {
@@ -98,21 +125,35 @@
     border-top: var(--size) solid var(--clr-neutral-100);
   }
 
-  nav a {
+  nav a,
+  button {
     display: flex;
     height: 100%;
     align-items: center;
     padding: 0 1em;
     color: var(--heading-color);
-    font-weight: 700;
     font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 10%;
     text-decoration: none;
     transition: color 0.2s linear;
   }
 
-  a:hover {
+  .active {
+    font-weight: 700;
+  }
+
+  a:hover,
+  button:hover {
     color: var(--accent-color);
+  }
+
+  button {
+    background: inherit;
+    border: none;
+    font-weight: var(--fw-700);
+  }
+
+  .btn-icon {
+    margin-right: 0.5em;
   }
 </style>
