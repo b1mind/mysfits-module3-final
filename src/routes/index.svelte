@@ -11,10 +11,11 @@
 
 <section class="light">
   <div class="container space">
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing</h1>
+    <h1>Final project: Kevin Powells CSS Demystified Module 3</h1>
     <p class="title-med">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, dicta
-      nostrum! Dicta beatae quo consequuntur inventore provident magni.
+      Took this project a bit further and made it using SvelteKit for the first
+      time. Challenging my self to make reusable components as well as CSS
+      classes.
     </p>
     <button class="btn"
       >Connect
