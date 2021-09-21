@@ -18,21 +18,16 @@
         <img src="/logo.svg" alt="Acme" />
       </a>
     </div>
+
     {#if isPost}
-      <nav>
-        <ul>
-          <li>
-            <button on:click={() => window.history.back()}>
-              <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24">
-                <path
-                  d="M15.422 7.406l-4.594 4.594 4.594 4.594-1.406 1.406-6-6 6-6z"
-                />
-              </svg>
-              Back
-            </button>
-          </li>
-        </ul>
-      </nav>
+      <button on:click={() => window.history.back()}>
+        <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24">
+          <path
+            d="M15.422 7.406l-4.594 4.594 4.594 4.594-1.406 1.406-6-6 6-6z"
+          />
+        </svg>
+        Back
+      </button>
     {/if}
   </div>
 
@@ -148,6 +143,8 @@
   }
 
   button {
+    height: 100%;
+    align-self: center;
     background: inherit;
     border: none;
     font-weight: var(--fw-700);
