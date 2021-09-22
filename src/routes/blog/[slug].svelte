@@ -24,15 +24,14 @@
   </title>
 </svelte:head>
 
-<div class="container space">
-  <h1>
-    {post.title}
-  </h1>
-  <p>{post.body}</p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
-    delectus suscipit. Sapiente amet blanditiis quaerat voluptatibus nam cum
-    impedit debitis voluptatem est voluptates, odit libero magnam sint.
-    Expedita, nemo tenetur?
-  </p>
-</div>
+<section>
+  <div class="container space">
+    <p>{post.body}</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
+      delectus suscipit. Sapiente amet blanditiis quaerat voluptatibus nam cum
+      impedit debitis voluptatem est voluptates, odit libero magnam sint.
+      Expedita, nemo tenetur?
+    </p>
+  </div>
+</section>

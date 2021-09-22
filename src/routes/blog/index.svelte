@@ -1,6 +1,6 @@
 <script context="module">
   //todo update with import?
-  export async function load({ fetch, page }) {
+  export async function load({ fetch }) {
     let res = await fetch('https://jsonplaceholder.typicode.com/posts/')
     let posts = await res.json()
     posts = posts.filter((index) => index.id <= 8)
@@ -24,12 +24,17 @@
   <title>Blog - acme</title>
 </svelte:head>
 
-<div class="container">
-  <div class="flex wrap">
-    {#each posts as { id, title, body }}
-      <Card {id} {title} img={`blog-${id}.jpg`} {body} />
-    {/each}
+<section>
+  <div class="container">
+    <div class="grid">
+      {#each posts as { id, title, body }}
+        <Card {id} {title} img={`blog-${id}.jpg`} {body} />
+      {/each}
+    </div>
   </div>
-</div>
+</section>
 
 <Inbox />
+
+<style lang="scss">
+</style>

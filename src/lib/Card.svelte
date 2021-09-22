@@ -10,32 +10,33 @@
   }
 </script>
 
-<article class="space">
+<article>
   <!-- //todo find out which way you want to do post images... -->
   <div class="img">
     <img src="/img/{img}" alt={title} />
   </div>
-  <h3><a href="/blog/{getSlug(title)}?id={id}">{title.substring(0, 40)}</a></h3>
-  <p>{body.substring(0, 80)}...</p>
+  <div class="text space">
+    <h3>
+      <a href="/blog/{getSlug(title)}?id={id}">{title.substring(0, 40)}</a>
+    </h3>
+    <p>{body.substring(0, 80)}...</p>
 
-  <footer class="flex">
-    <time class="title-sml" datetime="2021-10-08">Oct 8</time>
-    <time class="title-sml" datetime="PT08M">8 min <span>read</span></time>
-  </footer>
+    <footer class="flex">
+      <time class="title-sml" datetime="2021-10-08">Oct 8</time>
+      <time class="title-sml" datetime="PT08M">8 min <span>read</span></time>
+    </footer>
+  </div>
 </article>
 
 <style lang="scss">
-  article {
-    width: 225px;
-  }
-
   .img {
+    background-color: var(--clr-primary-400);
     border-radius: 1rem;
     overflow: hidden;
   }
 
   img {
-    height: 175px;
+    min-height: 175px;
     object-fit: cover;
   }
 

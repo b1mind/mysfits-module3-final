@@ -9,7 +9,7 @@
   <title>Home</title>
 </svelte:head>
 
-<section class="light">
+<section>
   <div class="container space">
     <h1>Final project: Kevin Powells CSS Demystified Module 3</h1>
     <p class="title-med">
@@ -26,7 +26,7 @@
   </div>
 </section>
 
-<section class="light">
+<section>
   <div class="container">
     <h2>About</h2>
     <div class="space">
@@ -47,7 +47,7 @@
   <div class="container">
     <h2>Blog</h2>
     <div class="title">Latest news, and opinions</div>
-    <div class="flex wrap">
+    <div class="grid">
       <Card />
       <Card />
       <Card />
@@ -59,10 +59,6 @@
 
 <style lang="scss">
   @use '../lib/scss/vars' as *;
-
-  .light {
-    --clr-bg: var(--clr-neutral-100);
-  }
 
   .accent {
     --clr-bg: var(--clr-primary-300);
