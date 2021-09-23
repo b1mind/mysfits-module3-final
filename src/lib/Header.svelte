@@ -157,19 +157,15 @@
     align-items: center;
     padding: 0 1em;
     color: var(--heading-color);
-    font-size: 0.8rem;
-    text-transform: uppercase;
+    font-size: var(--fs-300);
+    font-weight: 700;
     text-decoration: none;
     transition: color 0.2s linear;
   }
 
-  .active {
-    font-weight: 700;
-  }
-
   a:hover,
   button:hover {
-    color: var(--accent-color);
+    color: var(--clr-neutral-500);
   }
 
   button {

@@ -29,10 +29,15 @@
 </article>
 
 <style lang="scss">
-  .img {
-    background-color: var(--clr-primary-400);
-    border-radius: 1rem;
-    overflow: hidden;
+  article {
+    padding: 1rem;
+    background-color: var(--clr-bg, var(--clr-neutral-100));
+    border-radius: var(--br);
+
+    &:hover {
+      box-shadow: 0.5px 0.5px 30px hsla(0, 0, 0, 0.1);
+      z-index: 1;
+    }
   }
 
   img {

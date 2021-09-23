@@ -21,15 +21,6 @@
 </section>
 
 <style lang="scss">
-  .light {
-    --clr-bg: var(--clr-neutral-100);
-  }
-
-  .img {
-    border-radius: 1rem;
-    overflow: hidden;
-  }
-
   .flex {
     align-items: flex-end;
   }

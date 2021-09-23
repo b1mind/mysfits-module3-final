@@ -2,7 +2,23 @@
   import Card from '$lib/Card.svelte'
   import Inbox from '$lib/Inbox.svelte'
 
+  //todo update with import?
+  export async function load({ fetch }) {
+    let res = await fetch('https://jsonplaceholder.typicode.com/posts/')
+    let posts = await res.json()
+    posts = posts.filter((index) => index.id <= 3)
+
+    return {
+      props: {
+        posts
+      }
+    }
+  }
   export const prerender = true
+</script>
+
+<script>
+  export let posts
 </script>
 
 <svelte:head>
@@ -48,9 +64,9 @@
     <h2>Blog</h2>
     <div class="title">Latest news, and opinions</div>
     <div class="grid">
-      <Card />
-      <Card />
-      <Card />
+      {#each posts as { id, title, body }}
+        <Card {id} {title} img={`blog-${id}.jpg`} {body} />
+      {/each}
     </div>
   </div>
 </section>

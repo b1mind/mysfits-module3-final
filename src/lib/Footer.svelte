@@ -22,7 +22,7 @@
 
 <footer>
   <div class="container">
-    <section class="footer-nav">
+    <section class="footer-nav boarder">
       <img src="/logo.svg" alt="Acme" />
       <nav class="space">
         <h2>Map</h2>
@@ -58,10 +58,6 @@
 </footer>
 
 <style lang="scss">
-  section {
-    --clr-bg: var(--clr-neutral-100);
-  }
-
   .footer-nav {
     width: 100%;
     margin-top: 5rem;
@@ -70,9 +66,6 @@
     justify-content: space-between;
     align-items: flex-start;
     font-weight: var(--fw-700);
-    border-top: 1px solid var(--clr-neutral-200);
-    border-bottom: 1px solid var(--clr-neutral-200);
-    border-radius: 0;
 
     h2 {
       font-family: var(--ff-sans);
@@ -82,11 +75,13 @@
 
   .footer-text {
     padding: 2.5rem 0;
+    color: var(--clr-neutral-400);
+    font-family: var(--ff-serif);
   }
 
   .social {
     ul > * + * {
-      margin-left: 0.75em;
+      margin-left: 1.5em;
     }
   }
 </style>
