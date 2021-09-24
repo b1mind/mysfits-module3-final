@@ -20,19 +20,17 @@
       <a href="/blog/{getSlug(title)}?id={id}">{title.substring(0, 40)}</a>
     </h3>
     <p>{body.substring(0, 80)}...</p>
+
+    <footer class="flex">
+      <time class="title-sml" datetime="2021-10-08">Oct 8</time>
+      <time class="title-sml" datetime="PT08M">8 min <span>read</span></time>
+    </footer>
   </div>
-  <footer class="flex">
-    <time class="title-sml" datetime="2021-10-08">Oct 8</time>
-    <time class="title-sml" datetime="PT08M">8 min <span>read</span></time>
-  </footer>
 </article>
 
 <style lang="scss">
   article {
     padding: 0.75rem;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    gap: 1em;
     background-color: var(--clr-bg, var(--clr-neutral-100));
     border-radius: var(--br);
 
