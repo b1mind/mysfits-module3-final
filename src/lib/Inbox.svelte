@@ -28,7 +28,6 @@
 
 <style lang="scss">
   .flex {
-    align-items: flex-end;
     gap: 1em;
   }
 
@@ -42,13 +41,13 @@
   }
 
   label {
-    max-width: 250px;
     flex-shrink: 1;
     flex-grow: 1;
     font-size: var(--fs-200);
   }
 
   input {
+    width: 100%;
     display: block;
     font-size: var(--fs-400);
     border: none;

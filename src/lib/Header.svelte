@@ -11,7 +11,7 @@
     : `/img/${$page.path}.jpg`
 </script>
 
-<div class="hero" style="--header-img: url({header}); " class:isPost>
+<div class="hero" style="--header-img: url({header});" class:isPost>
   <header>
     <div class="logo flex">
       <div class="corner">

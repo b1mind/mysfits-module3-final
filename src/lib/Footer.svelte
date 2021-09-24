@@ -27,17 +27,19 @@
       <nav class="space">
         <h2>Map</h2>
         <ul class="space">
-          <li>Blog</li>
-          <li>Privacy</li>
+          <li>
+            <a href="#void">Blog</a>
+          </li>
+          <li><a href="#void">Privacy</a></li>
         </ul>
       </nav>
 
       <nav class="space">
         <h2>Resources</h2>
         <ul class="space">
-          <li>Courses</li>
-          <li>Hacks</li>
-          <li>Free Stuff</li>
+          <li><a href="#void">Courses</a></li>
+          <li><a href="#void">Hacks</a></li>
+          <li><a href="#void">Free Stuff</a></li>
         </ul>
       </nav>
     </section>

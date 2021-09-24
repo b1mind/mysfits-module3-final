@@ -26,7 +26,7 @@
 </svelte:head>
 
 <section>
-  <div class="container space">
+  <div class="intro container space">
     <h1>Final project: Kevin Powells CSS Demystified Module 3</h1>
     <p class="title-med">
       Took this project a bit further and made it using SvelteKit for the first
@@ -63,7 +63,7 @@
   <div class="container">
     <h2>Blog</h2>
     <div class="title">Latest news, and opinions</div>
-    <div class="grid">
+    <div class="grid space-lg">
       {#each posts as { id, title, body }}
         <Card {id} {title} img={`blog-${id}.jpg`} {body} />
       {/each}
@@ -74,13 +74,11 @@
 <Inbox />
 
 <style lang="scss">
-  @use '../lib/scss/vars' as *;
-
   .accent {
     --clr-bg: var(--clr-primary-300);
   }
 
-  .space {
-    --spacer: 2rem;
+  .intro {
+    --spacer: 2em;
   }
 </style>
