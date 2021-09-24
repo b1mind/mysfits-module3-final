@@ -7,10 +7,15 @@
       <img src="/img/newsletter.jpg" alt="Subscribe for newsletter" />
     </div>
 
-    <form class="flex" on:submit|preventDefault>
-      <label for="name">Name<input type="text" placeholder="Your Name" /></label
-      >
-      <label>Email<input type="text" placeholder="email@domain.com" /></label>
+    <form class="flex wrap space-lg" on:submit|preventDefault>
+      <label for="name">
+        Name<input type="text" placeholder="Your Name" />
+      </label>
+
+      <label for="email">
+        Email<input type="text" placeholder="email@domain.com" />
+      </label>
+
       <button class="btn"
         >Subscribe
         <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24">
@@ -24,23 +29,22 @@
 <style lang="scss">
   .flex {
     align-items: flex-end;
+    gap: 1em;
   }
 
   img {
     object-fit: cover;
   }
 
-  form {
-    padding: 1em;
-  }
-
   label,
   input {
-    width: 90%;
     padding: 0.3em;
   }
 
   label {
+    max-width: 250px;
+    flex-shrink: 1;
+    flex-grow: 1;
     font-size: var(--fs-200);
   }
 
@@ -52,7 +56,8 @@
     border-radius: 0;
 
     &:focus {
-      outline: none;
+      border-bottom: 1px solid var(--clr-neutral-900);
+      outline: transparent;
     }
     &::placeholder {
       color: var(--clr-neutral-300);
