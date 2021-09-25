@@ -64,13 +64,16 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    @media (max-width: $mediaSml) {
+      padding: 0.5em 1em;
+    }
   }
 
   .hero {
     position: relative;
     width: 100%;
     max-width: $mediaLg;
-    min-height: 500px;
+    min-height: 50vh;
     margin: 0 auto;
     padding: 1em;
     display: grid;
@@ -89,6 +92,14 @@
 
   .isPost {
     background-position: 300px 50%;
+    @media (max-width: $mediaSml) {
+      background-size: auto;
+      background-position: center bottom;
+
+      h1 {
+        margin: 3em 0 10em 0;
+      }
+    }
   }
 
   .logo {
