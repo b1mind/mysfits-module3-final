@@ -70,15 +70,16 @@
   header {
     padding: 2rem;
     align-items: center;
+    flex-wrap: wrap;
 
-    @media (max-width: $mediaSml) {
+    @media (max-width: $mediaMed) {
       display: none;
       visibility: hidden;
     }
   }
 
   section.top {
-    @media (min-width: $mediaSml) {
+    @media (min-width: $mediaMed) {
       padding-top: 0;
     }
   }
