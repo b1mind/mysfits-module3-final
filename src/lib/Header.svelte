@@ -60,7 +60,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 2em;
+    padding: 1rem 2em;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;

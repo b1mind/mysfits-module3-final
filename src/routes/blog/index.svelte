@@ -24,7 +24,7 @@
   <title>Blog - acme</title>
 </svelte:head>
 
-<section>
+<section class="top">
   <div class="container">
     <header class="flex">
       <nav>
@@ -77,7 +77,7 @@
     }
   }
 
-  section:first-child {
+  section.top {
     @media (min-width: $mediaSml) {
       padding-top: 0;
     }
