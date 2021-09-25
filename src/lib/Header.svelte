@@ -21,7 +21,7 @@
       </div>
 
       {#if isPost}
-        <button on:click={() => window.history.back()}>
+        <button class="btn" on:click={() => window.history.back()}>
           <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24">
             <path
               d="M15.422 7.406l-4.594 4.594 4.594 4.594-1.406 1.406-6-6 6-6z"
@@ -115,22 +115,21 @@
     object-fit: contain;
   }
 
-  nav {
-    display: flex;
-    justify-content: center;
-  }
+  @media (max-width: $mediaSml) {
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      color: var(--clr-neutral-100);
+      background-color: var(--clr-neutral-900);
+      border-radius: var(--br) var(--br) 0 0;
+      z-index: 420;
 
-  ul {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    height: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    background: var(--background);
-    background-size: contain;
+      ul {
+        justify-content: space-evenly;
+      }
+    }
   }
 
   li {
@@ -150,30 +149,9 @@
     border-top: var(--size) solid var(--clr-neutral-100);
   }
 
-  nav a,
-  button {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    padding: 0 1em;
-    color: var(--heading-color);
-    font-size: var(--fs-300);
-    font-weight: 700;
-    text-decoration: none;
-    transition: color 0.2s linear;
-  }
-
   a:hover,
   button:hover {
     color: var(--clr-neutral-500);
-  }
-
-  button {
-    height: 100%;
-    align-self: center;
-    background: inherit;
-    border: none;
-    font-weight: var(--fw-700);
   }
 
   .btn-icon {
