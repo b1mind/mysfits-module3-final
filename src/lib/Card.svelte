@@ -37,6 +37,7 @@
       box-shadow: 0.5px 0.5px 30px rgba(0, 0, 0, 10%);
       transform: translate(0);
       z-index: 1;
+      cursor: pointer;
     }
   }
 
