@@ -7,11 +7,13 @@ Todo:
   ☐ update package.json
   ☐ scss and postcss plugins
   ☐ update readme.md
-  ☐ separate hero from header with new slot component
+  ✘ separate hero from header with new slot component @cancelled(21-09-25 12:07)
   ☐ make json logic a store if it can serve one request
 
 Style:
-  ☐ form inputs/labels
-  ☐ change card containers to grid
-  ☐ hover for cards
-  ☐ links for cards and defaults
+  ✔ form inputs/labels @done(21-09-25 12:07)
+  ✔ change card containers to grid @done(21-09-25 12:07)
+  ✔ hover for cards @done(21-09-25 12:07)
+  ✔ links for cards and defaults @done(21-09-25 12:07)
+  ☐ mobile nav
+  ☐ blog page rework
