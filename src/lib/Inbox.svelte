@@ -33,6 +33,7 @@
 
   img {
     object-fit: cover;
+    min-height: 250px;
   }
 
   label,
