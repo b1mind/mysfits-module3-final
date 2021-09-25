@@ -60,10 +60,11 @@
 </footer>
 
 <style lang="scss">
+  @use 'scss/vars' as *;
+
   .footer-nav {
     width: 100%;
     margin-top: 5rem;
-    padding: 5rem 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -79,11 +80,20 @@
     padding: 2.5rem 0;
     color: var(--clr-neutral-400);
     font-family: var(--ff-serif);
+
+    @media (max-width: $mediaSml) {
+      flex-direction: column-reverse;
+      margin-bottom: 2rem;
+    }
   }
 
   .social {
     ul > * + * {
       margin-left: 1.5em;
+    }
+
+    @media (max-width: $mediaSml) {
+      margin-bottom: 2rem;
     }
   }
 </style>
