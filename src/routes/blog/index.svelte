@@ -119,16 +119,24 @@
   }
 
   @media (min-width: $mediaMed) {
-    .card:first-child {
+    .grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .grid > * {
+      grid-column: span 2;
+    }
+
+    .grid > *:first-child {
       grid-column: 1 / -1;
     }
 
-    .card:nth-child(5n + 3) {
-      grid-column: 3 / 4;
+    .grid > *:nth-child(5n + 3) {
+      grid-column: 4 / 7;
     }
 
     .card:nth-child(5n + 2) {
-      grid-column: 1 / 3;
+      grid-column: 1 / 4;
     }
   }
 </style>
