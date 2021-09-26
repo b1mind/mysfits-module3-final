@@ -1,19 +1,21 @@
 Todo:
-  ✘ github pages deploy script @cancelled(21-09-03 18:33)
-  ✔ vercel deploy @done(21-09-08 21:43)
-  ✔ update gitignore @done(21-09-18 22:03)
-  ✔ favicon and logo @done(21-09-18 22:03)
-  ✔ global.scss and _var.scss @done(21-09-08 22:47)
   ☐ update package.json
   ☐ scss and postcss plugins
   ☐ update readme.md
-  ✘ separate hero from header with new slot component @cancelled(21-09-25 12:07)
   ☐ make json logic a store if it can serve one request
 
 Style:
-  ✔ form inputs/labels @done(21-09-25 12:07)
-  ✔ change card containers to grid @done(21-09-25 12:07)
-  ✔ hover for cards @done(21-09-25 12:07)
-  ✔ links for cards and defaults @done(21-09-25 12:07)
-  ☐ mobile nav
   ☐ blog page rework
+
+Archive:
+  ✘ github pages deploy script @cancelled(21-09-03 18:33) @project(Todo)
+  ✔ vercel deploy @done(21-09-08 21:43) @project(Todo)
+  ✔ update gitignore @done(21-09-18 22:03) @project(Todo)
+  ✔ favicon and logo @done(21-09-18 22:03) @project(Todo)
+  ✔ global.scss and _var.scss @done(21-09-08 22:47) @project(Todo)
+  ✘ separate hero from header with new slot component @cancelled(21-09-25 12:07) @project(Todo)
+  ✔ form inputs/labels @done(21-09-25 12:07) @project(Style)
+  ✔ change card containers to grid @done(21-09-25 12:07) @project(Style)
+  ✔ hover for cards @done(21-09-25 12:07) @project(Style)
+  ✔ links for cards and defaults @done(21-09-25 12:07) @project(Style)
+  ✔ mobile nav @done(21-09-25 17:07) @project(Style)
