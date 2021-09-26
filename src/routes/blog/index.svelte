@@ -27,15 +27,15 @@
 <section class="top">
   <div class="container">
     <header class="flex">
-      <nav>
+      <div class="blog-nav">
         <ul>
-          <li><a href="#void">Design</a></li>
-          <li><a href="#void">Front-End</a></li>
-          <li><a href="#void">Back-End</a></li>
-          <li><a href="#void">Web</a></li>
-          <li><a href="#void">Apps</a></li>
+          <li><button href="#void">Design</button></li>
+          <li><button href="#void">Front-End</button></li>
+          <li><button href="#void">Back-End</button></li>
+          <li><button href="#void">Web</button></li>
+          <li><button href="#void">Apps</button></li>
         </ul>
-      </nav>
+      </div>
       <button class="btn"
         >Subscribe
 
@@ -68,13 +68,39 @@
 <style lang="scss">
   @use '../../lib/scss/vars' as *;
   header {
-    padding: 2rem;
+    padding: 1rem 0;
     align-items: center;
     flex-wrap: wrap;
 
     @media (max-width: $mediaMed) {
       display: none;
       visibility: hidden;
+    }
+  }
+
+  .blog-nav {
+    button {
+      width: max-content;
+      font-size: var(--fs-200);
+      font-weight: var(--fw-400);
+      text-transform: uppercase;
+      background: transparent;
+      border: none;
+    }
+
+    li {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    li:hover::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 3px solid var(--clr-primary-400);
     }
   }
 
